@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/listings/:listings_id', express.static('public'));
+app.use('/', express.static('public'));
 
 app.get('/api/listings/:listing_id/reviews', (req, res) => {
   const listingID = req.params.listing_id;
